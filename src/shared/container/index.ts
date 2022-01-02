@@ -6,12 +6,13 @@ import { UsersRepository } from '../../modules/users/repositories/UsersRepositor
 import { IStatementsRepository } from '../../modules/statements/repositories/IStatementsRepository';
 import { StatementsRepository } from '../../modules/statements/repositories/StatementsRepository';
 
+container.registerSingleton<IStatementsRepository>(
+  'StatementsRepository',
+  StatementsRepository
+);
+
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
   UsersRepository
 );
 
-container.registerSingleton<IStatementsRepository>(
-  'StatementsRepository',
-  StatementsRepository
-);
